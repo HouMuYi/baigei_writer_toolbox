@@ -40,7 +40,7 @@ async function detectLanguages() {
 	}
 	
 	// 若偵測失敗（非 Live Server 等開發環境），則以基礎支援語系作為 fallback 容錯
-	SUPPORTED_LANGS = ['zh-Hant', 'la', 'grc', 'qya', 'tlh'];
+	SUPPORTED_LANGS = ['zh-Hant', 'la', 'grc', 'qya', 'tlh', 'non'];
 }
 
 /**
