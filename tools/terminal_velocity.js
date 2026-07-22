@@ -40,9 +40,12 @@ export default {
 				<button type="button" data-m="3200" data-r="0.1" data-l="5">${l('選項_牛頓之劍', {}, K)}</button>
 				<button type="button" data-m="60000" data-r="1.975" data-l="37.57">${l('選項_空客', {}, K)}</button>
 				<button type="button" data-m="60000" data-r="1.88" data-l="39.5">${l('選項_波音', {}, K)}</button>
+				<button type="button" data-m="90000" data-r="2.3" data-l="37.24">${l('選項_哥倫比亞號', {}, K)}</button>
 				<button type="button" data-m="100000" data-r="1.44" data-l="61.66">${l('選項_協和', {}, K)}</button>
 				<button type="button" data-m="5000000" data-r="4.5" data-l="124.4">${l('選項_星艦', {}, K)}</button>
+				<button type="button" data-m="100000000" data-r="39" data-l="333">${l('選項_福特號', {}, K)}</button>
 				<button type="button" data-m="700000000" data-r="25" data-l="508">${l('選項_臺北101', {}, K)}</button>
+				<button type="button" data-m="4500000000" data-r="230" data-l="642.5">${l('選項_進取號', {}, K)}</button>
 				<button type="button" data-m="2500000000000" data-r="1520" data-l="3040">${l('選項_博格', {}, K)}</button>
 			</div>
 
