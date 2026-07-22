@@ -1,0 +1,7 @@
+# 臨時與系統備份檔
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+STATUS.md
+

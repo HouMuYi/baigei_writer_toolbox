@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>白給的寫作工具箱</title>
+	<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA6MObAP+EAAChe1IA////AH1KFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVVVVVVVVUAEiIiIiIiJQASREJEREIlABIiIkIiQiUAEkRCQiJCJQASQkJEREIlABJCIiIiIiUAEiQiJEQiJQASRCQiIiQlABJCIkIiQiUAEiQiJCQiJQASIiIiQiIlABIiIiIiIiUAEREREREREwAAAAAAAAAAD//wAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAAD//wAA">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="app-header">
+		<div class="header-title">
+			<h1 id="header-h1"><a href="index.html">🚀 白給的寫作工具箱</a></h1>
+			<span class="header-divider">/</span>
+			<div class="quick-nav-group"></div>
+		</div>
+		<p id="header-subtitle">專為創作者打造的一鍵化計算工具集。</p>
+	</header>
+
+	<main class="layout-container" id="tool-app-root">
+		<div id="categories-root">
+			<!-- 動態由 tools_data.js 生成分類與鋪開卡片 -->
+		</div>
+	</main>
+
+	<footer class="app-footer">
+		<p id="app-footer-p"></p>
+	</footer>
+
+	<script type="module">
+		import { TOOLS } from './tools_data.js?v=6';
+		import { CONSTANTS, fmt, PresetManager, parseMarkdown, initQuickNav, initHonglu, initTheme, t, l } from './common.js';
+
+		async function renderApp() {
+			document.getElementById('header-subtitle').textContent = t('通用_副標題');
+			document.getElementById('app-footer-p').innerHTML = `© 2026 白給公主 | <a href="index.html?page=README.md">${t('通用_關於')}</a> | <a href="index.html?page=LICENSE">${t('頁尾_授權')}</a>`;
+
+			const urlParams = new URLSearchParams(window.location.search);
+			const tool = urlParams.get('tool');
+			const page = urlParams.get('page');
+
+			const appRoot = document.getElementById('tool-app-root');
+
+			if (tool) {
+				// 1. 載入微工具 JS 模組 (tool=xxx)
+				appRoot.innerHTML = '';
+
+				let toolFound = false;
+				Object.values(TOOLS).forEach(toolList => {
+					if (toolList.includes(tool)) toolFound = true;
+				});
+
+				if (toolFound) {
+					const toolName = l('工具_名稱', {}, tool);
+					document.title = `${toolName} - ${t('通用_標題')}`;
+					document.getElementById('header-subtitle').style.display = 'none';
+				}
+
+				try {
+					const module = await import(`./tools/${tool}.js`);
+					if (module.default && typeof module.default.render === 'function') {
+						module.default.render(appRoot, { CONSTANTS, fmt, PresetManager, t, l });
+					} else {
+						appRoot.innerHTML = `<div class="panel"><h2 class="card-title">⚠️ 模組載入錯誤</h2><p>模組 ${tool}.js 未實作 render 介面。</p></div>`;
+					}
+				} catch (err) {
+					console.error('微工具模組載入失敗:', err);
+					appRoot.innerHTML = `<div class="panel"><h2 class="card-title">⚠️ 找不到該寫作工具 (${tool})</h2><p>請確認工具名稱是否正確。</p></div>`;
+				}
+				initQuickNav(tool);
+
+			} else if (page) {
+				// 2. 載入 Markdown / 純文字說明文件 (page=xxx.md 或 page=LICENSE)
+				appRoot.style.flexDirection = 'row';
+				appRoot.innerHTML = '';
+
+				const targetFile = page;
+				const titleName = page.split('/').pop().replace(/\.[^/.]+$/, '');
+				document.title = `${titleName} - ${t('通用_標題')}`;
+				document.getElementById('header-subtitle').style.display = 'none';
+
+				try {
+					const res = await fetch(targetFile);
+					if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+					const mdText = await res.text();
+					const parsedHTML = parseMarkdown(mdText, targetFile);
+
+					appRoot.innerHTML = `
+						<div class="panel card markdown-body" style="width: 100%;">
+							${parsedHTML}
+						</div>
+					`;
+				} catch (err) {
+					console.error(t('錯誤_載入文件'), err);
+					appRoot.innerHTML = `<div class="panel"><h2 class="card-title">${t('標題_載入文件失敗')}</h2><p>${t('錯誤_無法讀取文件', { file: targetFile })}</p></div>`;
+				}
+				initQuickNav('');
+
+			} else {
+				// 3. 顯示總看板
+				appRoot.style.flexDirection = '';
+				appRoot.innerHTML = '<div id="categories-root"></div>';
+				document.getElementById('header-subtitle').style.display = '';
+
+				const root = document.getElementById('categories-root');
+				if (root) {
+					root.innerHTML = Object.entries(TOOLS).map(([catKey, toolList]) => `
+						<section class="category-section">
+							<h2 class="category-title">${t(catKey)}</h2>
+							<div class="nav-grid">
+								${toolList.map(toolId => `
+									<a href="index.html?tool=${toolId}" class="nav-card">
+										<h3>${l('工具_名稱', {}, toolId)}</h3>
+										<p>${l('工具_描述', {}, toolId)}</p>
+									</a>
+								`).join('')}
+							</div>
+						</section>
+					`).join('');
+				}
+				initQuickNav('');
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', async () => {
+			const savedLang = localStorage.getItem('honglu_lang') || 'zh-Hant';
+			await initHonglu(savedLang);
+			await renderApp();
+
+			window.addEventListener('honglu:langchange', async () => {
+				await renderApp();
+			});
+
+			window.addEventListener('app:navchange', async () => {
+				await renderApp();
+			});
+
+			window.addEventListener('popstate', async () => {
+				await renderApp();
+			});
+
+			document.body.addEventListener('click', (e) => {
+				const anchor = e.target.closest('a');
+				if (anchor) {
+					const href = anchor.getAttribute('href');
+					if (href && (href.startsWith('index.html') || href === 'index.html')) {
+						e.preventDefault();
+						history.pushState(null, '', href);
+						renderApp();
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>
