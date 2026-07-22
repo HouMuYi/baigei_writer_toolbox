@@ -1,7 +1,10 @@
 # 臨時與系統備份檔
 *.bak
 *.tmp
+tmp
 .DS_Store
 Thumbs.db
+# 開發階段工具
 STATUS.md
-
+check_honglu.mjs
+deploy.mjs

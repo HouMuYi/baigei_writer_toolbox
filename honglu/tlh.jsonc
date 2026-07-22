@@ -1,11 +1,16 @@
 {
 	"tlh": {
+		// [天文物理官方詞彙備忘]
+		// luSpet: 黑洞 (Black Hole)
+		// tlham: 重力/引力 (Gravity)
+		// ngI': 質量/重量/密度 (Mass/Weight)
+		// chung: 加速/加速度 (Acceleration)
 		"__GLOBAL__": {
-			"通用_標題": "🚀 chIj wa'DIch",
-			"通用_副標題": "poH, leng, 'u' ghoghmey",
+			"通用_標題": "chIj wa'DIch",
+			"通用_副標題": "ghoghmey",
 			"看板_首頁": "🏠 vaS",
 			"分類_相對論": "poH, leng, 'u'",
-			"分類_天體": "Hov, pIp, He",
+			"分類_天體": "Hov, tlham, He",
 			"分類_能量": "HoS, Qaw'",
 			"通用_參數": "chovnatlh",
 			"通用_計算結果": "pItlh",
@@ -43,32 +48,50 @@
 			"單位_倍靜止質量": "xM0",
 			"單位_年": "DIS",
 			"單位_億年": "10^8 DIS",
-			"語言_名稱": "tlhIngan Hol"
+			"語言_名稱": "tlhIngan Hol",
+			"天體_地球": "tera'",
+			"天體_月球": "maS",
+			"天體_火星": "Mars",
+			"天體_金星": "Venus",
+			"天體_木星": "Jupiter",
+			"天體_土星": "Saturn",
+			"天體_土衛六": "Titan",
+			"天體_太陽": "pemHov",
+			"通用_環境參數": "qo'",
+			"通用_幾何參數": "mIw",
+			"通用_重力加速度": "g",
+			"通用_大氣密度": "ρ",
+			"通用_大氣音速": "c",
+			"通用_物體質量": "m",
+			"通用_物體半徑": "r",
+			"通用_長度邊長": "L",
+			"通用_風阻係數": "Cd",
+			"通用_迎風面積": "yoS"
 		},
 		"time_dilation": {
 			"工具_名稱": "⏳ poH chang'eng",
-			"工具_描述": "poH, γ (Gamma), Duj, tera'.",
+			"工具_描述": "%c Do bIngDaq Lorentz (γ), tera' poH Duj poH je, tIq Qaw', ngI' Qaw' je togh.",
 			"飛船速度": "Duj Do (%c)",
 			"地球經過時間": "tera' poH (DIS)",
 			"洛倫茲因子": "Lorentz (γ)",
 			"船員時間": "Duj poH",
 			"長度收縮": "tIq Qaw'",
-			"動態質量": "pIp Qaw'",
+			"動態質量": "ngI' Qaw'",
 			"評估結語": "Duj {beta}% Do (γ = {gamma}), tera' {earthYears} DIS, Duj {shipYears} DIS."
 		},
 		"constant_acceleration": {
-			"工具_名稱": "🚀 tlhuH Do",
-			"工具_描述": "G Do, Duj poH, tera' poH.",
+			"工具_名稱": "🚀 chung leng",
+			"工具_描述": "chung tlham bIngDaq Duj poH, tera' poH, Do nIv je togh.",
 			"航行總距離": "leng ly",
-			"恆定加速度": "tlhuH G",
+			"恆定加速度": "chung tlham",
 			"船員時間": "Duj poH",
 			"地球時間": "tera' poH",
-			"最高速度": "Do mIn",
-			"評估結語": "Duj {acc}G Do, {dist} ly leng, Duj {shipYears} DIS, tera' {earthYears} DIS."
+			"最高速度": "Do nIv",
+			"評估結語": "Duj {acc} tlham Do, {dist} ly leng, Duj {shipYears} DIS, tera' {earthYears} DIS."
 		},
 		"cosmology_redshift": {
 			"工具_名稱": "🌌 'u' Doq",
-			"工具_描述": "Planck 67.4 ghap HST 73.0, z, v.",
+			"工具_描述": "leng lI', Planck 67.4 HST 73.0 joq wIv, Do v Doq z je togh.",
 			"共動距離": "leng Mpc",
 			"哈伯常數流派": "Hubble (H0, km/s/Mpc)",
 			"選項_普朗克": "Planck 2018 (67.4)",
@@ -80,46 +103,47 @@
 		},
 		"roche_limit": {
 			"工具_名稱": "💥 Roche Qaw'",
-			"工具_描述": "Roche R_M, pIp.",
+			"工具_描述": "Dun G bIngDaq qab Roche bIQ Roche je togh.",
 			"主星半徑": "Dun R (R_M, km)",
-			"主星密度": "Dun pIp (g/cm³)",
-			"衛星密度": "mach pIp (g/cm³)",
-			"剛體極限": "qab Roche",
+			"主星密度": "Dun ngI' (g/cm³)",
+			"衛星密度": "mach ngI' (g/cm³)",
+			"剛體極限": "let Roche",
 			"流體極限": "bIQ Roche",
 			"評估結語": "bIQ Qaw' {fluid} km, qab Qaw' {rigid} km."
 		},
 		"hill_sphere": {
-			"工具_名稱": "🌐 Hill pIp",
-			"工具_描述": "Hill pIp, He.",
+			"工具_名稱": "🌐 Hill tlham",
+			"工具_描述": "Dun G bIngDaq Hill R He pItlh je togh.",
 			"主星質量": "Dun M (x M_Sol)",
 			"次星質量": "mach m (x M_Earth)",
 			"軌道半長軸": "He a (AU)",
 			"希爾球半徑": "Hill R (km)",
 			"穩定軌道上限": "He pItlh (1/3 Hill)",
-			"評估結語": "mach pIp {hill} km, He pItlh {stable} km."
+			"評估結語": "mach tlham {hill} km, He pItlh {stable} km."
 		},
 		"habitable_zone": {
 			"工具_名稱": "☀️ yIn He",
-			"工具_描述": "yIn He R_in, R_out.",
+			"工具_描述": "Hov wov lI', yIn He R_in R_out je togh.",
+			"恆星光度": "Hov wov (L, x Sol)",
 			"內界半徑": "mach R (R_in)",
 			"外界半徑": "Dun R (R_out)",
 			"評估結語": "yIn He {rin} AU taH {rout} AU."
 		},
 		"escape_velocity": {
-			"工具_名稱": "🪐 pIp tlheD Do",
-			"工具_描述": "G, v2, mIn.",
+			"工具_名稱": "🪐 tlham tlheD Do",
+			"工具_描述": "Hov M R je lI', G, tlheD Do (v2), mIn pIp je togh.",
 			"星球質量": "Hov M",
 			"星球半徑": "Hov R",
 			"眼睛高度": "mIn tIq (m)",
-			"表面重力": "G",
+			"表面重力": "tlham",
 			"逃逸速度": "tlheD Do (v2)",
-			"地平線距離": "mIn pIp",
+			"地平線距離": "mIn chuq",
 			"評估結語": "G {g}, v2 {v2} km/s, mIn {horizon} km."
 		},
 		"atmospheric_retention": {
 			"工具_名稱": "💨 muD pol",
-			"工具_描述": "Jeans muD pol.",
-			"平均溫度": "muD Quch (℃)",
+			"工具_描述": "muD Quch tlheD Do je lI', muD pol chov.",
+			"平均溫度": "muD tuj (℃)",
 			"逃逸速度": "tlheD Do (km/s)",
 			"狀態_保留": "✅ pol",
 			"狀態_流失": "❌ tlheD",
@@ -127,7 +151,7 @@
 		},
 		"stellar_magnitude": {
 			"工具_名稱": "⭐ Hov wov",
-			"工具_描述": "M, m, Hov wov.",
+			"工具_描述": "M wov joq leng je lI', m mIn wov je togh.",
 			"絕對星等": "M",
 			"觀測距離": "leng ly",
 			"視星等": "m",
@@ -137,21 +161,21 @@
 			"評估結語": "leng {dist} ly, m = {m}. {visibility}."
 		},
 		"tidal_locking": {
-			"工具_名稱": "🔒 pIp poH",
-			"工具_描述": "pIp poH.",
+			"工具_名稱": "🔒 tlham poH",
+			"工具_描述": "Dun M mach m je bIngDaq tlham poH chov.",
 			"母星質量": "Dun M",
 			"行星質量": "mach m",
 			"行星半徑": "mach R",
 			"軌道半長軸": "He a (AU)",
 			"鎖定時間": "poH",
-			"鎖定狀態": "pIp",
-			"狀態_已鎖定": "🔒 pIp pItlh",
-			"狀態_未鎖定": "🔄 pIp Qaw'",
-			"評估結語": "He {a} AU, {t} 10^8 DIS pIp."
+			"鎖定狀態": "tlham",
+			"狀態_已鎖定": "🔒 tlham pItlh",
+			"狀態_未鎖定": "🔄 tlham Qaw'",
+			"評估結語": "He {a} AU, {t} 10^8 DIS tlham."
 		},
 		"kinetic_impact": {
 			"工具_名稱": "☄️ Qaw' HoS",
-			"工具_描述": "Qaw' HoS, TNT.",
+			"工具_描述": "%c Do bIngDaq Qaw' HoS Joule TNT je togh.",
 			"撞擊體質量": "Qaw' m (kg)",
 			"撞擊速度": "Do (%c)",
 			"總焦耳能": "Joule",
@@ -160,21 +184,21 @@
 		},
 		"mass_energy": {
 			"工具_名稱": "⚛️ m-E HoS",
-			"工具_描述": "m-E HoS, TNT.",
+			"工具_描述": "100%, 0.7%, 0.09% joq E bIngDaq m-E HoS Joule TNT je togh.",
 			"反應物質量": "m (g)",
 			"轉換效率": "E (%)",
 			"選項_湮滅": "100% - Qaw'",
 			"選項_融合": "0.7% - boq",
-			"選項_分裂": "0.09% - nIH",
+			"選項_分裂": "0.09% - wav",
 			"總能量": "Joule",
 			"TNT當量": "TNT",
 			"評估結語": "{m}g marta {energy} J ({tnt} ton TNT)."
 		},
 		"centrifugal_gravity": {
-			"工具_名稱": "🌀 jIr G",
-			"工具_描述": "jIr G, RPM.",
+			"工具_名稱": "🌀 jIr tlham",
+			"工具_描述": "jIr R RPM je togh, jIr tlham bIngDaq yIn chov.",
 			"旋轉半徑": "jIr R (m)",
-			"目標重力": "G",
+			"目標重力": "tlham",
 			"自轉速度": "RPM",
 			"生理適應性": "yIn",
 			"狀態_安全": "✅ maj (RPM ≤ 2)",
@@ -183,25 +207,47 @@
 			"評估結語": "R {r}m, {g}G, {rpm} RPM. {safety}"
 		},
 		"black_hole": {
-			"工具_名稱": "🕳️ Hurgh Qaw'",
-			"工具_描述": "Schwarzschild, Hurgh Qaw'.",
-			"黑洞質量": "Hurgh M",
+			"工具_名稱": "🕳️ luSpet",
+			"工具_描述": "Schwarzschild R_s togh, luSpet tlham bIngDaq yIn Hegh joq chov.",
+			"黑洞質量": "luSpet M",
 			"觀測體身長": "yIn tIq (m)",
 			"史瓦西半徑": "R_s",
-			"視界潮汐力": "Hurgh G",
+			"視界潮汐力": "luSpet tlham",
 			"狀態_致死": "💀 Hegh",
 			"狀態_安全": "🛡️ yIn",
-			"評估結語": "M {Ms}, Rs {Rs} km. Hurgh G {tidal}. {survival}"
+			"評估結語": "M {Ms}, Rs {Rs} km. luSpet tlham {tidal}. {survival}"
 		},
 		"rocket_equation": {
 			"工具_名稱": "⛽ Duj HoS",
-			"工具_描述": "Duj HoS, Delta-v.",
+			"工具_描述": "Delta-v Isp je bIngDaq m_0 HoS m je togh.",
 			"飛船乾重": "Duj m (ton)",
 			"目標DeltaV": "Delta-v (km/s)",
 			"引擎比衝": "Isp (s)",
 			"起飛濕重": "m_0",
 			"推進劑質量": "HoS m",
 			"評估結語": "m {mf} ton, dv {dv} km/s, HoS {mfuel} ton. m_0 {m0} ton."
+		},
+		"terminal_velocity": {
+			"工具_名稱": "🪂 pum DoS",
+			"工具_描述": "pum DoS, Mach pum DoS, 99% pum Chuq, pum HoS je togh.",
+			"選項_萌妹": "be'Hom",
+			"選項_糙漢": "loD",
+			"選項_牛頓之劍": "yan Newton",
+			"選項_空客": "Airbus A320",
+			"選項_波音": "Boeing 737",
+			"選項_協和": "Concorde",
+			"選項_星艦": "Duj V3",
+			"選項_臺北101": "Taipei 101",
+			"選項_博格": "Borg ngaQ",
+			"球體模型": "moQ",
+			"豎直圓柱": "tIng retlhom",
+			"水平圓柱": "SaS retlhom",
+			"正方體": "ngaQ",
+			"終端速度": "pum DoS",
+			"含可壓縮修正": "Mach pum DoS",
+			"墜落距離": "99% pum Chuq",
+			"終端動能": "HoS",
+			"能效密度": "HoS ngI'"
 		}
 	}
 }

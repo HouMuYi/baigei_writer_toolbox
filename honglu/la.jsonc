@@ -1,8 +1,8 @@
 {
 	"la": {
 		"__GLOBAL__": {
-			"通用_標題": "🚀 Arca Instrumentorum Scriptoris",
-			"通用_副標題": "Instrumenta supputationum physicarum et astronomicarum",
+			"通用_標題": "Arca Instrumentorum Scriptoris",
+			"通用_副標題": "Instrumenta supputationum automataria ad scriptores designata",
 			"看板_首頁": "🏠 Tabula Primaria",
 			"分類_相對論": "Relativitas, Navigatio et Cosmologia",
 			"分類_天體": "Corpora Caelestia, Gravitas et Orbitae",
@@ -39,11 +39,29 @@
 			"單位_焦耳": "J",
 			"單位_噸TNT": "t TNT",
 			"單位_百萬噸TNT": "Mt TNT",
-			"單位_公噸": "t",
-			"單位_倍靜止質量": "x massa restans",
-			"單位_年": "anni",
-			"單位_億年": "centies decies centena milia annorum",
-			"語言_名稱": "Latina"
+			"單位_公噸": "Massa tonna metrica",
+			"單位_倍靜止質量": "Multiplicatio massae quiescentis",
+			"單位_年": "Annus",
+			"單位_億年": "Centum decies anni",
+			"語言_名稱": "Latina",
+			"天體_地球": "Tellus",
+			"天體_月球": "Luna",
+			"天體_火星": "Mars",
+			"天體_金星": "Venus",
+			"天體_木星": "Iuppiter",
+			"天體_土星": "Saturnus",
+			"天體_土衛六": "Titan",
+			"天體_太陽": "Sol",
+			"通用_環境參數": "Parametri Ambientes",
+			"通用_幾何參數": "Parametri Geometrici",
+			"通用_重力加速度": "Acceleratio gravitatis",
+			"通用_大氣密度": "Densitas atmosphaerae",
+			"通用_大氣音速": "Celeritas soni",
+			"通用_物體質量": "Massa",
+			"通用_物體半徑": "Radius",
+			"通用_長度邊長": "Longitudo seu latus",
+			"通用_風阻係數": "Coefficientis resistentiae",
+			"通用_迎風面積": "Area Proiecta"
 		},
 		"time_dilation": {
 			"工具_名稱": "⏳ Dilatatio Temporis Relativistica",
@@ -99,10 +117,10 @@
 			"評估結語": "Sphaera Hill est {hill} km; orbita satelitis ad longum tempus stabilis est circa {stable} km."
 		},
 		"habitable_zone": {
-			"工具_名稱": "☀️ Zona Habitabilis Stellae",
-			"工具_描述": "Scribe luminositatem stellae ad computandum limites interiores et exteriores aquae liquidae.",
-			"恆星光度": "Luminositas stellae（L, x Solis）",
-			"內界半徑": "Radius interior（R_in）",
+			"工具_名稱": "☀️ Zona Habitabilis",
+			"工具_描述": "Computat fines spatii ubi aqua liquida exsistere potest.",
+			"恆星光度": "Luminositas Stellae（L, x Sol）",
+			"內界半徑": "Radius Interior（R_in）",
 			"外界半徑": "Radius exterior（R_out）",
 			"評估結語": "Zona habitabilis sita est inter {rin} AU et {rout} AU."
 		},
@@ -203,6 +221,28 @@
 			"起飛濕重": "Massa humida ad initium（m_0）",
 			"推進劑質量": "Massa propellentis necessaria",
 			"評估結語": "Navis {mf} t, ut {dv} km/s Delta-v consequatur, {mfuel} t propellentis eget. Massa humida inicialis {m0} t est."
+		},
+		"terminal_velocity": {
+			"工具_名稱": "🪂 Celeritas Terminalis",
+			"工具_描述": "Computat celeritatem terminalem, correctionem Mach compressibilitatis, distantiam casus et energiam kineticam terminalem sub diversis gravitatibus et atmosphaeris.",
+			"選項_萌妹": "Puella",
+			"選項_糙漢": "Vir Virilis",
+			"選項_牛頓之劍": "Gladius Newtoni",
+			"選項_空客": "Airbus A320",
+			"選項_波音": "Boeing 737",
+			"選項_協和": "Concorde",
+			"選項_星艦": "Navis Stellaris V3",
+			"選項_臺北101": "Taipei 101",
+			"選項_博格": "Cubus Borg",
+			"球體模型": "Model Sphaerae",
+			"豎直圓柱": "Cylindrus Verticalis",
+			"水平圓柱": "Cylindrus Horizontalis",
+			"正方體": "Cubus Rectus",
+			"終端速度": "Celeritas Terminalis",
+			"含可壓縮修正": "Cum Correctione Compressibilitatis",
+			"墜落距離": "Distantia Casus ad 99% Celeritatis",
+			"終端動能": "Energia Kinetica Terminalis",
+			"能效密度": "Densitas Energiae Kineticae"
 		}
 	}
 }

@@ -1,8 +1,8 @@
 {
 	"qya": {
 		"__GLOBAL__": {
-			"通用_標題": "🚀 Carcalion Tyávëa",
-			"通用_副標題": "Ilyë carci ontarion ilúvëa ar ciryamo",
+			"通用_標題": "Carcalion Tyávëa",
+			"通用_副標題": "Ilyë carci ontarion ilúvëa",
 			"看板_首頁": "🏠 Tarmen",
 			"分類_相對論": "Lúmë, Ciryamo ar Ilu",
 			"分類_天體": "Eleni, Luvu ar Meni",
@@ -28,7 +28,7 @@
 			"主題_暗色": "🌙 Morë",
 			"主題_亮色": "☀️ Calin",
 			"通用_關於": "Omenta",
-			"頁尾_授權": "Licentia MIT",
+			"頁尾_授權": "MIT Lávë",
 			"單位_G": "G",
 			"單位_kms": "km/s",
 			"單位_m": "m",
@@ -43,11 +43,29 @@
 			"單位_倍靜止質量": "xM0",
 			"單位_年": "loa",
 			"單位_億年": "10^8 loa",
-			"語言_名稱": "Quenya"
+			"語言_名稱": "Quenya",
+			"天體_地球": "Ambar",
+			"天體_月球": "Isil",
+			"天體_火星": "Carnil",
+			"天體_金星": "Nalli",
+			"天體_木星": "Valanya",
+			"天體_土星": "Lumbar",
+			"天體_土衛六": "Titan",
+			"天體_太陽": "Anar",
+			"通用_環境參數": "Ambara",
+			"通用_幾何參數": "Canta Ammar",
+			"通用_重力加速度": "g",
+			"通用_大氣密度": "ρ",
+			"通用_大氣音速": "c",
+			"通用_物體質量": "m",
+			"通用_物體半徑": "r",
+			"通用_長度邊長": "L",
+			"通用_風阻係數": "Cd",
+			"通用_迎風面積": "Area"
 		},
 		"time_dilation": {
 			"工具_名稱": "⏳ Lúmë Palla",
-			"工具_描述": "Lúmë ar luvu, caita γ (Gamma).",
+			"工具_描述": "Notë Lorentz nótë (γ), Ambar ar ciryamo lúmë, anda nícë ar polda rácë nu %c lintië.",
 			"飛船速度": "Ciryamo lintië (%c)",
 			"地球經過時間": "Ambar lúmë (loa)",
 			"洛倫茲因子": "Lorentz (γ)",
@@ -58,7 +76,7 @@
 		},
 		"constant_acceleration": {
 			"工具_名稱": "🚀 Voronwa Tultë",
-			"工具_描述": "Voronwa G, ciryamo ar Ambar lúmë.",
+			"工具_描述": "Notë ciryamo ar Ambar lúmë, ar ancalima lintië nu voronwa G tultë.",
 			"航行總距離": "Elen-loa palla (ly)",
 			"恆定加速度": "Voronwa G",
 			"船員時間": "Ciryamo lúmë",
@@ -68,11 +86,11 @@
 		},
 		"cosmology_redshift": {
 			"工具_名稱": "🌌 Ilu Carnë",
-			"工具_描述": "Planck 67.4 hya HST 73.0, z ar v.",
-			"共動距離": "Comovens (Mpc)",
+			"工具_描述": "Panya palla, cilë Planck 67.4 hya HST 73.0, notë heca lintië ar carnë z.",
+			"共動距離": "Ilu palla (Mpc)",
 			"哈伯常數流派": "Hubble (H0, km/s/Mpc)",
 			"選項_普朗克": "Planck 2018 (67.4)",
-			"選項_哈伯": "Telescopium Hubble HST (73.0)",
+			"選項_哈伯": "Haitir Hubble HST (73.0)",
 			"選項_中間值": "Endë (70.0)",
 			"退行速度": "Lintië heca (v)",
 			"宇宙學紅移": "Carnë (z)",
@@ -80,7 +98,7 @@
 		},
 		"roche_limit": {
 			"工具_名稱": "💥 Roche Luvu",
-			"工具_描述": "Roche R_M ar rácë.",
+			"工具_描述": "Notë tarya ar sírë Hecel rácë meni (Roche R_M) nu Héra luvu.",
 			"主星半徑": "Héra R (R_M, km)",
 			"主星密度": "Héra polda (g/cm³)",
 			"衛星密度": "Hecel polda (g/cm³)",
@@ -90,7 +108,7 @@
 		},
 		"hill_sphere": {
 			"工具_名稱": "🌐 Hill Coron",
-			"工具_描述": "Hill coron ar Hecel.",
+			"工具_描述": "Notë Hill coron palla, i an-anda voronwa meni Héra luvu pella.",
 			"主星質量": "Héra M (x M_Sol)",
 			"次星質量": "Hecel m (x M_Earth)",
 			"軌道半長軸": "Meni (a, AU)",
@@ -100,14 +118,15 @@
 		},
 		"habitable_zone": {
 			"工具_名稱": "☀️ Cuilë Meni",
-			"工具_描述": "Cuilë ar nén meni.",
+			"工具_描述": "Notë mitya ar hecel meni palla yassë nén ar cuilë polë caita.",
+			"恆星光度": "Elen calë (L, x Sol)",
 			"內界半徑": "Mitya R (R_in)",
 			"外界半徑": "Hecel R (R_out)",
 			"評估結語": "Cuilë meni {rin} AU tenna {rout} AU."
 		},
 		"escape_velocity": {
 			"工具_名稱": "🪐 Luvu ar Awa-lintië",
-			"工具_描述": "G, v2 ar pella henta.",
+			"工具_描述": "Panya Elen M ar R, notë luvu G, awa-lintië (v2) ar pella henta palla.",
 			"星球質量": "Elen M",
 			"星球半徑": "Elen R",
 			"眼睛高度": "Henta taryë (m)",
@@ -118,7 +137,7 @@
 		},
 		"atmospheric_retention": {
 			"工具_名稱": "💨 Vilya Marta",
-			"工具_描述": "Jeans vilya marta.",
+			"工具_描述": "Panya vilya nárë ar awa-lintië, nava qui vilya polë marta andavë.",
 			"平均溫度": "Vilya nárë (℃)",
 			"逃逸速度": "Awa-lintië (km/s)",
 			"狀態_保留": "✅ Marta",
@@ -127,7 +146,7 @@
 		},
 		"stellar_magnitude": {
 			"工具_名稱": "⭐ Elen Calë",
-			"工具_描述": "M ar m, elen calë.",
+			"工具_描述": "Panya M hya cala, notë m ar henta cén nu panyana elen-loa palla.",
 			"絕對星等": "M",
 			"觀測距離": "Palla (ly)",
 			"視星等": "m",
@@ -138,7 +157,7 @@
 		},
 		"tidal_locking": {
 			"工具_名稱": "🔒 Luvu Lúmë",
-			"工具_描述": "Tidal luvu lúmë.",
+			"工具_描述": "Nava i anda lúmë yassë Ambar nauva luvu-na Héranna.",
 			"母星質量": "Héra M",
 			"行星質量": "Ambar m",
 			"行星半徑": "Ambar R",
@@ -151,7 +170,7 @@
 		},
 		"kinetic_impact": {
 			"工具_名稱": "☄️ Poldorë Húrë",
-			"工具_描述": "Poldorë ar TNT.",
+			"工具_描述": "Notë ilya Joule poldorë ar TNT húrë nu %c lintië.",
 			"撞擊體質量": "Húrë m (kg)",
 			"撞擊速度": "Lintië (%c)",
 			"總焦耳能": "Joule",
@@ -160,19 +179,19 @@
 		},
 		"mass_energy": {
 			"工具_名稱": "⚛️ M-E Poldorë",
-			"工具_描述": "M-E ar TNT.",
+			"工具_描述": "Notë Joule poldorë ar TNT ontana as 100%, 0.7% hya 0.09% m-E E.",
 			"反應物質量": "m (g)",
 			"轉換效率": "E (%)",
 			"選項_湮滅": "100% - Ú-m",
-			"選項_融合": "0.7% - Fusion",
-			"選項_分裂": "0.09% - Fission",
+			"選項_融合": "0.7% - Ertë",
+			"選項_分裂": "0.09% - Saca",
 			"總能量": "Joule",
 			"TNT當量": "TNT",
 			"評估結語": "{m}g marta {energy} J ({tnt} ton TNT)."
 		},
 		"centrifugal_gravity": {
 			"工具_名稱": "🌀 Pelë G",
-			"工具_描述": "Pelë G ar RPM.",
+			"工具_描述": "Notë pelë R ar RPM, ar nava hroa vanya nu pelë G.",
 			"旋轉半徑": "Pelë R (m)",
 			"目標重力": "G",
 			"自轉速度": "RPM",
@@ -184,7 +203,7 @@
 		},
 		"black_hole": {
 			"工具_名稱": "🕳️ Morë Felya",
-			"工具_描述": "Schwarzschild ar Morë Felya.",
+			"工具_描述": "Notë Schwarzschild R_s ar nava hroa qualmë hya cuilë nu felya luvu G.",
 			"黑洞質量": "Morë M",
 			"觀測體身長": "Hroa anda (m)",
 			"史瓦西半徑": "R_s",
@@ -195,13 +214,35 @@
 		},
 		"rocket_equation": {
 			"工具_名稱": "⛽ Urulócë Poldorë",
-			"工具_描述": "Urulócë ar Delta-v.",
+			"工具_描述": "Notë m_0 ar nárë m nu panyana Delta-v ar Isp.",
 			"飛船乾重": "Cirya m (ton)",
 			"目標DeltaV": "Delta-v (km/s)",
 			"引擎比衝": "Isp (s)",
 			"起飛濕重": "m_0",
 			"推進劑質量": "Nárë m",
 			"評估結語": "m {mf} ton, dv {dv} km/s, nárë {mfuel} ton. m_0 {m0} ton."
+		},
+		"terminal_velocity": {
+			"工具_名稱": "🪂 Lanta Lintië",
+			"工具_描述": "Notë lanta lintië, Mach nícë, 99% lanta palla ar lanta poldorë.",
+			"選項_萌妹": "Seldo",
+			"選項_糙漢": "Nér",
+			"選項_牛頓之劍": "Macil Newtono",
+			"選項_空客": "Airbus A320",
+			"選項_波音": "Boeing 737",
+			"選項_協和": "Concorde",
+			"選項_星艦": "Vinya Cirya V3",
+			"選項_臺北101": "Taipei 101",
+			"選項_博格": "Borg Paca",
+			"球體模型": "Corna",
+			"豎直圓柱": "Orta Tarma",
+			"水平圓柱": "Caila Tarma",
+			"正方體": "Paca",
+			"終端速度": "Lanta Lintië",
+			"含可壓縮修正": "Mach vista",
+			"墜落距離": "99% Lanta Palla",
+			"終端動能": "Lanta Poldorë",
+			"能效密度": "Poldorë polda"
 		}
 	}
 }

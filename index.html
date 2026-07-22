@@ -10,7 +10,7 @@
 <body>
 	<header class="app-header">
 		<div class="header-title">
-			<h1 id="header-h1"><a href="index.html">🚀 白給的寫作工具箱</a></h1>
+			<h1 id="header-h1"><a href="index.html">白給的寫作工具箱</a></h1>
 			<span class="header-divider">/</span>
 			<div class="quick-nav-group"></div>
 		</div>
@@ -32,6 +32,7 @@
 		import { CONSTANTS, fmt, PresetManager, parseMarkdown, initQuickNav, initHonglu, initTheme, t, l } from './common.js';
 
 		async function renderApp() {
+			document.querySelector('#header-h1 a').textContent = t('通用_標題');
 			document.getElementById('header-subtitle').textContent = t('通用_副標題');
 			document.getElementById('app-footer-p').innerHTML = `© 2026 白給公主 | <a href="index.html?page=README.md">${t('通用_關於')}</a> | <a href="index.html?page=LICENSE">${t('頁尾_授權')}</a>`;
 

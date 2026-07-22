@@ -23,6 +23,7 @@ export const TOOLS = {
 	"分類_能量": [
 		"kinetic_impact",
 		"mass_energy",
+		"terminal_velocity",
 		"centrifugal_gravity",
 		"black_hole",
 		"rocket_equation"
